@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet de Validación de Repartidor</title>
+    <style>
+        /* Reset de márgenes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos del body para centrar contenido */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff; /* Fondo blanco */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Título estilizado en negritas */
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Estilo del icono de verificación */
+        .verified {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: #28a745; /* Verde más intenso para verificación */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo del check mark */
+        .verified::before {
+            content: "✔"; /* Símbolo de check */
+            margin-right: 8px;
+            color: #28a745;
+        }
+
+        /* Contenedor principal con relación de aspecto fija */
+        .card {
+            width: 90%;
+            max-width: 700px; /* Tamaño mayor para pantallas grandes */
+            aspect-ratio: 1004 / 591; /* Mantiene la proporción de la imagen */
+            background-color: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Imagen ocupando todo el contenedor y animación de rotación */
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: rotateOnLoad 1.2s ease-out;
+        }
+
+        /* Definición de la animación de rotación */
+        @keyframes rotateOnLoad {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Ajustes de tamaño para dispositivos móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 22px;
+            }
+            .card {
+                max-width: 90%; /* Se adapta al ancho de la pantalla en móviles */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Carnet de Validación de Repartidor</h1>
+    <div class="verified">Verificado</div>
+    <div class="card">
+        <img src="1.png" alt="Foto de la carta de presentación">
+    </div>
+</body>
+</html>
+
